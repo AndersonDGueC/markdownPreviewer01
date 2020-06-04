@@ -1,8 +1,11 @@
 import React from 'react'
 
+
 const Button=({name, handleFunction})=>{
 return(
-<button onClick={handleFunction}>{name} </button>
+    
+<button className="btn btn-primary justify-content-cente" size="sm" onClick={handleFunction}>{name} </button>
+
 )
 }
 export default Button;

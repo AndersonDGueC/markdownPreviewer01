@@ -59,17 +59,26 @@ class MakdPrev extends Component{
         return(
             
             <section>
+                <div className="card text-center">
                 <Button name={name} handleFunction={this.handleClick}/>
-            {<article >
-                    <textarea id="editor" value={text} onChange={
+                </div>
+                
+            {!active&&<article  >
+                    <form className="d-flex flex-xl-column flex-wrap ">
+                    <textarea className="form-control form-control-lg"  rows="19" id="editor" value={text} onChange={
                         this.handleChange
                     }></textarea>
+                    </form>
                 </article>
-    }      
-             {<article id="preview" dangerouslySetInnerHTML={{__html:transMarked}}>
+    }           
+             {active&&
+             <div className="container-fluid">
+             <article className="p-5" id="preview" dangerouslySetInnerHTML={{__html:transMarked}}>
+             
+                </article>
+                </div> 
+                }
                 
-                </article>}
-
 
 
                 
